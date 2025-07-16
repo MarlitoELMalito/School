@@ -1,0 +1,79 @@
+BEGIN
+    max ← -∞
+
+    REPEAT
+        PRINT "Enter a number (0 to stop):"
+        READ num
+
+        IF num > max THEN
+            max ← num
+        END IF
+    UNTIL num = 0
+
+    PRINT "Biggest number was", max
+END
+
+
+
+BEGIN
+    PRINT "What's your name?"
+    READ name
+
+    PRINT "Hello, World", name
+END
+
+BEGIN
+    total ← 0
+    count ← 0
+
+    REPEAT
+        PRINT "Enter a number (0 to stop):"
+        READ num
+
+        IF num ≠ 0 THEN
+            total ← total + num
+            count ← count + 1
+        END IF
+    UNTIL num = 0
+
+    IF count > 0 THEN
+        average ← total / count
+        PRINT "Average is", average
+    ELSE
+        PRINT "No numbers entered"
+    END IF
+END
+
+
+
+
+BEGIN
+    groceries ← []
+
+    PRINT "Enter grocery items (blank to finish):"
+    WHILE TRUE
+        READ item
+        IF item = "" THEN
+            BREAK
+        END IF
+        ADD item TO groceries
+    END WHILE
+
+    SORT groceries
+
+    FOR EACH thing IN groceries
+        PRINT thing
+    END FOR
+END
+
+
+BEGIN
+    PRINT "Enter a number:"
+    READ n
+
+    IF n MOD 2 = 0 THEN
+        PRINT "fizz"
+    ELSE
+        PRINT "buzz"
+    END IF
+END
